@@ -1,0 +1,640 @@
+$primary-color:#1F5F8B;
+$white:#fff;
+$black :#000;
+$ad-bg-color:#707070;
+$background-color:#F6F6F6;
+$hover-color:#e2e2e2;
+
+$transition-effect: all 0.5s ease-out;
+
+body{
+  background-color: $background-color;
+  margin: auto;
+}
+
+img{
+  height: 100%;
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+}
+
+.content{
+  margin: 1% auto;
+  width: 90%;
+  display: flex;
+}
+
+// LANDING PAGE
+.index-page {
+  text-align: center;
+  position: relative;
+  margin:5%;
+  height: 100vh;
+}
+
+
+.index-logo{
+position: absolute;
+left: 0;
+top: 0;
+font-size: 36px;
+font-weight: bold;
+}
+
+.index-menu{
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 36px;
+  padding: 2%;
+  border-radius: 75%;
+  transition: $transition-effect;
+}
+
+.index-menu:hover{
+  background-color:$hover-color;
+  cursor: pointer;
+}
+
+.menu-contents{
+  position: absolute;
+    flex-wrap: wrap;
+    right: 0;
+    background-color: $primary-color;
+    padding: 1%;
+    width: 15%;
+    top: 15%;
+    border-radius: 5px;
+    display: none;
+    z-index: 1;
+
+    a{
+      color: $white;
+    }
+    i{
+      font-size: 30px;
+    }
+    >div{
+      width: 50%;
+      box-sizing: border-box;
+      margin: auto;
+      padding: 5%;
+    }
+}
+
+.index-menu:hover+.menu-contents{
+  display: flex;
+}
+
+.menu-contents:hover+.menu-contents{
+  display: flex;
+}
+
+
+
+.index-content{
+  width: 60%;
+    margin: auto;
+    padding: 20vh 0 4vh 0;
+    h2{
+     display: block;
+     font-size: 30px;
+    }
+    h4{
+      display: inline;
+      font-size: 20px;
+    }
+}
+
+.index-search{
+  position: relative;
+    width: 70%;
+    margin: 8% auto 0;
+  
+
+  input{
+   width: 100%;
+   border: 1px solid $primary-color;
+   border-radius: 25px;
+   font-size: 16px;
+   padding: 12px 28px;
+   outline: none;
+   box-sizing: border-box;
+  }
+  input:focus{
+    box-shadow: 1px 1px 6px $primary-color;
+    opacity: 0.5;
+  }
+
+  a{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 5%;
+    font-size: 26px;
+    color: $primary-color;
+  }
+
+}
+
+.index-bookmarks{
+
+  display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 2% auto;
+  div{
+    text-align: center;
+    width: 25%;
+    height: auto;
+    box-sizing: border-box;
+    margin: auto;
+    border-radius: 5px;
+    padding: 5%;
+    transition: $transition-effect;
+    }
+  div:hover{
+    background-color: $hover-color;
+  }
+
+a{
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+// NAVBAR
+.navbar{
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 0.5fr;
+  grid-template-rows: 1fr 1fr 0.5fr;
+  margin-top: 2%;
+
+  .navbar-1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: center;
+
+    >div{
+      position: unset;
+    }
+    a{
+      color: $black;
+    }
+  }
+
+  .navbar-2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .navbar-3{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    text-align: center;
+    position: unset;
+  }
+
+  .navbar-4{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    margin: 1% auto;
+    width: 50%;
+  }
+
+  .navbar-5{
+    grid-column: 1/4;
+    grid-row: 3/4;
+    background: #1F5F8B;
+    text-align: center;
+    align-items: center;
+    padding: 1%;
+    a{
+      color: #fff;
+    padding: 1%;
+    font-size: 20px;
+    }
+    a:hover{
+      background-color: $black;
+    }
+  }
+}
+
+// SEARCH RESULTS
+.left-promote{
+  width: 20%;
+    background: $ad-bg-color;
+    margin: 0 2%;
+    color: $white;
+    align-items: center;
+    text-align: center;
+}
+
+.search-results{
+  width: 50%;
+  .search-results-link{
+    display: flex;
+    flex-direction: column;
+    >a{
+      border-bottom: 1px solid $black;
+      padding: 2%;
+      color:$black;
+      font-size: 18px;
+    }
+    a:hover{
+      background-color: $white;
+    }
+  }
+
+  .search-page-index{
+    text-align: center;
+    padding: 5%;
+  }
+}
+
+.right-content{
+width: 20%;
+}
+
+// BANNER CSS
+.banner{
+  background-color: $primary-color;
+  display: flex;
+  padding: 5%;
+  box-sizing: border-box;
+  border-bottom: 1px solid $white;
+
+  div.banner-txt{
+    align-items: center;
+    color: #fff;
+    width: 75%;
+    padding-left: 5%;
+
+    h1{
+      font-size: 40px;
+    }
+    h3{
+font-size: 26px;
+    }
+  }
+
+  div.banner-img{
+    width: 15%;
+    height: fit-content;
+  }
+}
+
+
+.banner-2{
+  flex-direction: row-reverse;
+
+  .banner-txt-2{
+text-align: right;
+padding-right: 5%;
+  }
+}
+
+
+// PROMOTIONAL
+.promote{
+text-align: center;
+  div{
+    margin: 1% auto;
+    width: 80%;
+    background-color: #707070;
+    color: $white;
+    padding: 2%;
+    font-size: 22px;
+  }
+    
+}
+
+// FROM WEB
+.from-web{
+  width: 80%;
+  margin: 1% auto;
+}
+
+.title{
+  border-right: 5px solid $primary-color;
+    width: fit-content;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 1%;
+}
+
+.from-web-content{
+display: grid;
+grid-template-columns: 5fr 1.5fr;
+
+.content-links-container{
+  grid-row: 1/2;
+  grid-column: 1/2;
+
+  .content-links{
+    border: 1px solid #000;
+    display: grid;
+    grid-template-rows: 1fr 2fr 0.5fr;
+    grid-template-columns: 1fr 1.5fr 1.5fr;
+    padding: 2%;
+    margin: 3%;
+    text-align: justify;
+    background-color: $white;
+
+    a{
+      color: $primary-color;
+    }
+
+    .content-links-img{
+      grid-column: 1/2;
+     grid-row: 1/4;
+      width: fit-content;
+      height: fit-content;
+      margin: auto;
+    }
+    .content-links-title{
+
+      grid-column: 2/4;
+      grid-row: 1/2;
+
+      a{
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+    .content-links-description{
+      grid-column: 2/4;
+      grid-row: 2/3;
+    }
+    .content-links-src{
+      grid-column: 2/3;
+      grid-row: 3/4;
+      a{
+        text-decoration: none;
+      }
+    }
+
+    .content-links-more{
+      grid-column: 3/4;
+      grid-row: 3/4;
+      text-align: right;
+
+      a:hover{
+        color: $black;
+      }
+    }
+  }
+
+}
+
+.content-sources{
+  grid-row: 1/2;
+  grid-column: 2/3;
+  font-size: 20px;
+  font-weight: bold;
+
+  >div{
+    border: 1px solid $black;
+    padding: 5%;
+    background-color: $white;
+    
+    >div{
+      display: flex;
+      margin: 5% auto;
+     
+    }
+    a{
+      margin: 4px 6px;
+      text-decoration: none;
+      color: $black;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    a:hover{
+      color: $primary-color;
+    }
+
+    img{
+      height: 25px;
+      width: 25px;
+    }
+  }
+}
+}
+
+// FEATURED
+
+.featured-carousel{
+  margin: 3% auto;
+}
+.featured-carousel-individual{
+    margin: 1%;
+    width: 55%;
+    text-align: center;
+    a{
+      color: $black;
+    } 
+}
+
+.featured-carousel-individual:hover{
+  box-shadow: 1px 1px 4px $primary-color;
+}
+
+
+/* UNIVERSITY FACULTIES */
+.university-faculty{
+  width: 100%;
+  margin: 1% auto;
+}
+
+.university-name{
+  display: flex;
+}
+.university-name>div{
+  width: 50%;
+}
+
+.advertise-1{
+  background-color: #1F5F8B;
+  color: #fff;
+  text-align: center;
+align-items: center;
+justify-content: center;}
+
+.faculty{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.faculty>div{
+  width: 50%;
+}
+
+.faculty-list{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15%;
+  a{
+    padding: 4px 0;
+    color: $black;
+    font-size: 18px;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+}
+
+
+/* FACULTY */
+
+.faculty-content{
+  margin: 1% auto;
+  display: flex;
+}
+.faculty-content>div{
+  margin: auto;
+}
+
+
+.faculty-details{
+  width: 40%;
+}
+
+.faculty-src-link{
+  font-size: 16px;
+}
+
+.faculty-name{
+}
+
+.faculty-parts{
+  margin-left: 10%;
+}
+.faculty-semester{
+  border: 1px solid $primary-color;
+  padding: 3% 5%;
+  margin: 2% 0;
+  font-size: 18px;
+}
+
+.active-sem,.faculty-semester:hover{
+  background-color: $primary-color;
+  color: $white;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.faculty-semester:hover.faculty-semester>i{
+  fill: $white;
+}
+
+.faculty-semester>i{
+  float: right;
+  fill: $primary-color;
+  transform: rotate(0deg);
+  transition:  transform 0.2s ease;
+}
+
+.faculty-semester-subjects{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.faculty-semester-subjects>div{
+  border-bottom: 1px solid $primary-color;
+  margin-left: 5%;
+  font-size: 16px;
+  padding: 8px;
+  width: 80%;
+  cursor: pointer;
+}
+
+.faculty-semester-subjects>div>i{
+  float: right;
+}
+
+.faculty-semester-subjects a{
+  color: black;
+}
+.faculty-semester-subjects a:hover{
+  text-decoration: underline;
+}
+
+
+.faculty-rightbar{
+  width: 30%;
+}
+
+
+// FOOTER
+.footer{
+  padding: 2% 5%;
+  background-color: $primary-color;
+
+  a{
+    color: $white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 1%;
+  }
+  a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .footer-links{
+    display: flex;
+    margin: 2% auto;
+    flex-wrap: wrap;
+
+    div{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      width: 25%;
+    }
+  }
+
+}
+
+.footer-bottom{
+  text-align: center;
+  padding: 4% 0 0;
+  font-size: 16px;
+  color: $white;
+}
+
+.developer{
+  
+  .developer-before{
+    
+  }
+  .developer-after{
+    transition: 1s;
+    display: none;
+  } 
+
+  .developer-before:hover+.developer-after{
+    display: block;
+  }
+
+  .developer-before:hover{
+  color:$primary-color;
+  }
+}
+
+.footer-questions{
+  a{
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+
