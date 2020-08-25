@@ -57,6 +57,7 @@
     <!-- Search box -->
     <div class="index-search" >
     <?php get_search_form(); ?>
+    <i class="fi-xnluxl-magnifying-glass"></i>   
    
       
     </div>
@@ -66,27 +67,27 @@
     <div class="index-bookmarks">
       <div>
       <a href="<?php echo get_post_type_archive_link( 'tu' ); ?>">
-          <img src="img/tu.png" alt="">
+          <img src="<?php echo get_theme_mod('University1_Logo'); ?>" alt="">
           <?php echo get_theme_mod('UniversityName1'); ?>
         </a>
       </div>
 
       <div>
         <a href="<?php echo get_post_type_archive_link( 'pokhara' ); ?>">
-          <img src="img/tu.png" alt="">
+          <img src="<?php echo get_theme_mod('University2_Logo'); ?>" alt="">
           <?php echo get_theme_mod('UniversityName2'); ?>
         
         </a>
       </div>
       <div>
       <a href="<?php echo get_post_type_archive_link( 'ku' ); ?>">
-          <img src="img/tu.png" alt="">
+          <img src="<?php echo get_theme_mod('University3_Logo'); ?>" alt="">
           <?php echo get_theme_mod('UniversityName3'); ?>
         </a>
       </div>
       <div>
       <a href="<?php echo get_post_type_archive_link( 'pu' ); ?>">
-          <img src="img/tu.png" alt="">
+          <img src="<?php echo get_theme_mod('University4_Logo'); ?>" alt="">
           <?php echo get_theme_mod('UniversityName4'); ?>
         </a>
       </div>
@@ -97,13 +98,16 @@
   </div>
 </section>
 
+
+
+
 <section class="banner">
   <div class="banner-txt">
     <h1><?php echo get_theme_mod('banner1_title'); ?></h1>
     <h3><?php echo get_theme_mod('banner1_text'); ?></h3>
   </div>
   <div class="banner-img">
-    <img src="img/tu.png" alt="">
+    <img src="<?php echo get_theme_mod('Banner1_image'); ?>" alt="">
   </div>
 </section>
 
@@ -113,57 +117,26 @@
     <h3><?php echo get_theme_mod('banner2_text'); ?></h3>
   </div>
   <div class="banner-img">
-    <img src="img/tu.png" alt="">
+    <img src="<?php echo get_theme_mod('Banner2_image'); ?>" alt="">
   </div>
 </section>
 
 
 
 <?php
-    $args = array(
-    'post_type'     => 'featured',
-    'post_status'   => 'publish',
-    'posts_per_page'=> 4,
-    );
-    $featured = new WP_Query( $args );
+include_once(get_template_directory() .'/section/featured.php');
+
 ?> 
 
-<section class="from-web featured">
-  <div class="title">Featured</div>
+<?php
+include_once(get_template_directory() .'/section/fromweb.php');
+
+?> 
 
 
 
-  <div class="owl-carousel featured-carousel">
-   
-<?php if( $featured->have_posts() ) :
-                while( $featured->have_posts() ) :
-                $featured->the_post();
-                ?> 
 
-    <div class="featured-carousel-individual">
 
-    
-      <a href="<?php the_permalink(); ?>">
-        <img src="img/tu.png" alt="">
-        <?php the_title();?>
-      </a>
-
-     
-    </div>
-    <?php endwhile; endif; ?> 
-    
-
-  </div>
-</section>
-
-<!-- PROMOTIONAL-->
-<!-- <?php include("section/promote.php");?> -->
-
-<!-- FROM WEB -->
-<!-- <?php include("section/fromweb.php");?> -->
-
-<!-- Promotional-->
-<!-- <?php include("section/promote.php");?> -->
 
 
 <!-- Footer -->

@@ -36,6 +36,14 @@ add_action('wp_enqueue_scripts','addjs');
 
 require get_template_directory() . '/includes/customizer.php';
 
+add_action( 'customize_controls_print_scripts', 'add_customizer_button' );
+
+function add_customizer_button()
+{
+    wp_register_script( 'my_customizer_script', plugins_url('/customizer_button.js', __FILE__) );
+    wp_enqueue_script( 'my_customizer_script' );
+}
+
 
 
 //Theme Option
@@ -135,6 +143,23 @@ $args = array(
 );
 
 register_post_type('featured',$args);
+
+
+$args = array(
+    'labels' => array(
+        'name' => 'From Web',
+        'singular_name' => 'from_web'
+    ),
+    'hierarchical' => true,
+    'public' => true,
+    'has_archive' => true,
+    'supports' => array('page-attributes'),
+    'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'custom-fields'),
+    'menu_position' => 5,
+
+);
+
+register_post_type('from_web',$args);
 
 
 }

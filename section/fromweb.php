@@ -1,67 +1,51 @@
+
+
 <section class="from-web">
   <div class="title">
     From Web
   </div>
 
+  <?php
+    $args = array(
+    'post_type'     => 'from_web',
+    'post_status'   => 'publish',
+    //  'category_name' => 'Health',
+    'posts_per_page'=> 8,
+    );
+    $from_web = new WP_Query( $args );
+?> 
+
+
   <div class="from-web-content">
+     
+
     <div class="content-links-container">
+    <?php if( $from_web->have_posts() ) :
+                while( $from_web->have_posts() ) :
+                $from_web->the_post();
+                ?> 
+ 
 
       <div class="content-links">
         <div class="content-links-img">
-          <img src="./img/sample.png" alt="">
+          <img src="<?php echo get_the_post_thumbnail_url();?>" alt="">
         </div>
         <div class="content-links-title">
-          <a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit</a>
+          <a href="#"><?php the_title()?></a>
         </div>
         <div class="content-links-description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet magni iusto dolorem, nam sapiente mollitia
-          deserunt, eum inventore reiciendis nulla voluptatum facilis dicta similique suscipit facere fugiat. Animi,
-          iure aliquid?
+        <?php the_excerpt()?>
         </div>
         <div class="content-links-src">
           <a href="#">contentsource.com</a>
         </div>
         <div class="content-links-more"> <a href="#">Read more..</a></div>
       </div>
-
-      <div class="content-links">
-        <div class="content-links-img">
-          <img src="./img/sample.png" alt="">
-        </div>
-        <div class="content-links-title">
-          <a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit</a>
-        </div>
-        <div class="content-links-description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet magni iusto dolorem, nam sapiente mollitia
-          deserunt, eum inventore reiciendis nulla voluptatum facilis dicta similique suscipit facere fugiat. Animi,
-          iure aliquid?
-        </div>
-        <div class="content-links-src">
-          <a href="#">contentsource.com</a>
-        </div>
-        <div class="content-links-more"> <a href="#">Read more..</a></div>
-      </div>
-
-      <div class="content-links">
-        <div class="content-links-img">
-          <img src="./img/sample.png" alt="">
-        </div>
-        <div class="content-links-title">
-          <a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit</a>
-        </div>
-        <div class="content-links-description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet magni iusto dolorem, nam sapiente mollitia
-          deserunt, eum inventore reiciendis nulla voluptatum facilis dicta similique suscipit facere fugiat. Animi,
-          iure aliquid?
-        </div>
-        <div class="content-links-src">
-          <a href="#">contentsource.com</a>
-        </div>
-        <div class="content-links-more"> <a href="#">Read more..</a></div>
-      </div>
+      <?php endwhile; endif; ?>
+                </div>
 
 
-    </div>
+    
 
 
     <div class="content-sources">

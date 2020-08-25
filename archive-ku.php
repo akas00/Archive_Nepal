@@ -12,7 +12,9 @@ get_header(); ?>
 <section class="content">
 
   <div class="left-promote">
-    PROMOTIONAL</div>
+  
+  <?php echo get_theme_mod('promotional_detail'); ?>
+</div>
 
   <!-- UNIVERSITIES FACULTIES -->
   <div class="university-faculty">
@@ -20,7 +22,8 @@ get_header(); ?>
       <div>
         <h1>Kathmandu University</h1>
       </div>
-      <div class="advertise-1">add here</div>
+      <div class="advertise-1">
+        <img src="<?php echo get_theme_mod('promotional_image'); ?>" ></div>
     </div>
 
 
@@ -95,163 +98,22 @@ if( $ku_faculty ): ?>
 
 
 
-
-
 <?php
-    $args = array(
-    'post_type'     => 'featured',
-    'post_status'   => 'publish',
-    'posts_per_page'=> 4,
-    );
-    $featured = new WP_Query( $args );
+include_once(get_template_directory() .'/section/featured.php');
+
 ?> 
 
-<section class="from-web featured">
-  <div class="title">Featured</div>
 
-
-
-  <div class="owl-carousel featured-carousel">
-   
-<?php if( $featured->have_posts() ) :
-                while( $featured->have_posts() ) :
-                $featured->the_post();
-                ?> 
-
-    <div class="featured-carousel-individual">
-
-    
-      <a href="<?php the_permalink(); ?>">
-        <img src="img/tu.png" alt="">
-        <?php the_title();?>
-      </a>
-
-     
-    </div>
-    <?php endwhile; endif; ?> 
-    
-
-  </div>
-</section>
 
      
 
-<!-- FROM WEB -->
-<section class="from-web">
-  <div class="title">
-    From Web
-  </div>
+<?php
+include_once(get_template_directory() .'/section/fromweb.php');
 
-  <div class="from-web-content">
-    <div class="content-links-container">
-
-      <div class="content-links">
-        <div class="content-links-img">
-          <img src="./img/sample.png" alt="">
-        </div>
-        <div class="content-links-title">
-          <a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit</a>
-        </div>
-        <div class="content-links-description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet magni iusto dolorem, nam sapiente mollitia
-          deserunt, eum inventore reiciendis nulla voluptatum facilis dicta similique suscipit facere fugiat. Animi,
-          iure aliquid?
-        </div>
-        <div class="content-links-src">
-          <a href="#">contentsource.com</a>
-        </div>
-        <div class="content-links-more"> <a href="#">Read more..</a></div>
-      </div>
-
-      <div class="content-links">
-        <div class="content-links-img">
-          <img src="./img/sample.png" alt="">
-        </div>
-        <div class="content-links-title">
-          <a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit</a>
-        </div>
-        <div class="content-links-description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet magni iusto dolorem, nam sapiente mollitia
-          deserunt, eum inventore reiciendis nulla voluptatum facilis dicta similique suscipit facere fugiat. Animi,
-          iure aliquid?
-        </div>
-        <div class="content-links-src">
-          <a href="#">contentsource.com</a>
-        </div>
-        <div class="content-links-more"> <a href="#">Read more..</a></div>
-      </div>
-
-      <div class="content-links">
-        <div class="content-links-img">
-          <img src="./img/sample.png" alt="">
-        </div>
-        <div class="content-links-title">
-          <a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit</a>
-        </div>
-        <div class="content-links-description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet magni iusto dolorem, nam sapiente mollitia
-          deserunt, eum inventore reiciendis nulla voluptatum facilis dicta similique suscipit facere fugiat. Animi,
-          iure aliquid?
-        </div>
-        <div class="content-links-src">
-          <a href="#">contentsource.com</a>
-        </div>
-        <div class="content-links-more"> <a href="#">Read more..</a></div>
-      </div>
+?> 
 
 
-    </div>
-
-
-    <div class="content-sources">
-      Sources
-      <div>
-        <div>
-          <div><img src="./img/tu.png" alt=""></div>
-          <div><a href="#">Tribhuvan University</a></div>
-        </div>
-        <div>
-          <div><img src="./img/tu.png" alt=""></div>
-          <div><a href="#">Tribhuvan University</a></div>
-        </div>
-        <div>
-          <div><img src="./img/tu.png" alt=""></div>
-          <div><a href="#">Tribhuvan University</a></div>
-        </div>
-        <div>
-          <div><img src="./img/tu.png" alt=""></div>
-          <div><a href="#">Tribhuvan University</a></div>
-        </div>
-        <div>
-          <div><img src="./img/tu.png" alt=""></div>
-          <div><a href="#">Tribhuvan University</a></div>
-        </div>
-        <div>
-          <div><img src="./img/tu.png" alt=""></div>
-          <div><a href="#">Tribhuvan University</a></div>
-        </div>
-        <div>
-          <div><img src="./img/tu.png" alt=""></div>
-          <div><a href="#">Tribhuvan University</a></div>
-        </div>
-
-        <div>
-          <div><img src="./img/tu.png" alt=""></div>
-          <div><a href="#">Tribhuvan University</a></div>
-        </div>
-        <div>
-          <div><img src="./img/tu.png" alt=""></div>
-          <div><a href="#">Tribhuvan University</a></div>
-        </div>
-        <div>
-          <div><img src="./img/tu.png" alt=""></div>
-          <div><a href="#">Tribhuvan University</a></div>
-        </div>
-      </div>
-
-    </div>
-
-</section>
-
+    
 <!-- FOOTER-->
 <?php get_footer(); ?>
+

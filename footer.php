@@ -1,17 +1,23 @@
 <section class="footer">
 
   <span class="footer-questions">
-    <a href="#">Questions ? Contact us</a>
+    <a href="#"><?php echo get_theme_mod('Footer_title'); ?></a>
   </span>
 
   <div class="footer-links">
-    <div>
-      <a href="#">Partners</a>
-      <a href="#">Affilliate</a>
-      <a href="#">Submit Questions</a>
-      <a href="#">Submit Answers</a>
-      <a href="#">Advertise</a>
-    </div>
+  <?php
+// Primary navigation menu.
+wp_nav_menu( array(
+    [
+        'menu_class' => 'main-nav navbar-nav ml-auto',
+        'container' => false,
+        'theme_location' => 'Footer_menu',
+        //'items_wrap'      => '<ul>%3$s</ul>',
+        'depth' => 4,
+        //
+    ]
+)  );
+?>
     <div>
       <a href="#">Partners</a>
       <a href="#">Affilliate</a>

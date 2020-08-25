@@ -14,6 +14,12 @@ function guide_customize_register( $wp_customize ) {
             'description' => '', 
             'priority' =>10, 
     ) );
+    $wp_customize->add_panel('promotional',array(
+        'title' =>__('promotional' ) ,
+        'description' => '', 
+        'priority' =>10, 
+) );
+
     
      $wp_customize->add_section( 'logo' , array(
             'title'   => 'Logo',
@@ -33,6 +39,46 @@ function guide_customize_register( $wp_customize ) {
             'title'   => 'University',
             'panel'   => 'homepage',
         ) );
+
+        $wp_customize->add_section( 'promotional_image' , array(
+            'title'   => 'promotional_image',
+            'panel'   => 'promotional',
+        ) );
+        $wp_customize->add_section( 'promotional_detail' , array(
+            'title'   => 'promotional_detail',
+            'panel'   => 'promotional',
+        ) );
+
+        $wp_customize->add_setting('promotional_image', array(
+        
+
+        ));
+    
+        $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'promotional_image', array(
+            'label'    => __('promotional_image '),
+            'section'  => 'promotional_image',
+            'settings' => 'promotional_image',
+            
+        )));
+
+
+        $wp_customize->add_setting( 'promotional_detail', array(
+            'default'           => __( 'Discover your advanture with joy you deserve' ),
+            'sanitize_callback' => 'esc_attr'
+       ) );
+       
+       $wp_customize->add_control( new WP_Customize_Control(
+           $wp_customize,
+           'promotional_detail',
+               array(
+                   'label'    => __( 'promotional_detail' ),
+                   'section'  => 'promotional_detail',
+                   'settings' => 'promotional_detail',
+                   'type'     => 'text'
+               )
+           )
+       );
+    
 
      $wp_customize->add_setting('logo', array(
         
@@ -100,6 +146,18 @@ $wp_customize->add_control( new WP_Customize_Control(
    )
 );
 
+$wp_customize->add_setting('University1_Logo', array(
+        
+
+));
+
+$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'University1_Logo', array(
+    'label'    => __('University1 Logo '),
+    'section'  => 'University',
+    'settings' => 'University1_Logo',
+    
+)));
+
 
 
 $wp_customize->add_setting( 'UniversityName2', array(
@@ -118,6 +176,18 @@ $wp_customize->add_control( new WP_Customize_Control(
        )
    )
 );
+
+$wp_customize->add_setting('University2_Logo', array(
+        
+
+));
+
+$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'University2_Logo', array(
+    'label'    => __('University2 Logo '),
+    'section'  => 'University',
+    'settings' => 'University2_Logo',
+    
+)));
 
 
 
@@ -138,6 +208,18 @@ $wp_customize->add_control( new WP_Customize_Control(
    )
 );
 
+$wp_customize->add_setting('University3_Logo', array(
+        
+
+));
+
+$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'University3_Logo', array(
+    'label'    => __('University3 Logo '),
+    'section'  => 'University',
+    'settings' => 'University3_Logo',
+    
+)));
+
 
 $wp_customize->add_setting( 'UniversityName4', array(
     'default'           => __( 'Tribhuvan' ),
@@ -155,6 +237,19 @@ $wp_customize->add_control( new WP_Customize_Control(
        )
    )
 );
+
+
+$wp_customize->add_setting('University4_Logo', array(
+        
+
+));
+
+$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'University4_Logo', array(
+    'label'    => __('University4 Logo '),
+    'section'  => 'University',
+    'settings' => 'University4_Logo',
+    
+)));
 
 $wp_customize->add_setting( 'banner1_title', array(
     'default'           => __( 'Tribhuvan' ),
@@ -189,6 +284,20 @@ $wp_customize->add_control( new WP_Customize_Control(
        )
    )
 );
+
+
+
+$wp_customize->add_setting('Banner1_image', array(
+        
+
+));
+
+$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'Banner1_image', array(
+    'label'    => __('Banner1_image '),
+    'section'  => 'mid_banner',
+    'settings' => 'Banner1_image',
+    
+)));
 
 $wp_customize->add_setting( 'banner2_title', array(
     'default'           => __( 'Tribhuvan' ),
@@ -225,81 +334,45 @@ $wp_customize->add_control( new WP_Customize_Control(
    )
 );
 
+$wp_customize->add_setting('Banner2_image', array(
+        
+
+));
+
+$wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'Banner2_image', array(
+    'label'    => __('Banner2_image '),
+    'section'  => 'mid_banner',
+    'settings' => 'Banner2_image',
+    
+)));
+
     $wp_customize->add_section( 'homefooter' , array(
-            'title'   => 'Footer Links',
+            'title'   => 'Footer title ',
             'panel'   => 'footer',
         ) );
 
-    $wp_customize->add_setting( 'link1', array(
+    $wp_customize->add_setting( 'Footer_title', array(
          'default'           => __( '' ),
          'sanitize_callback' => 'esc_attr'
     ) );
     
     $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
-        'link1',
+        'Footer_title',
             array(
-                'label'    => __( 'link1' ),
+                'label'    => __( ' Title' ),
                 'section'  => 'homefooter',
-                'settings' => 'link1',
+                'settings' => 'Footer_title',
                 'type'     => 'text'
             )
         )
     );
 
 
-    $wp_customize->add_setting( 'link2', array(
-        'default'           => __( '' ),
-        'sanitize_callback' => 'esc_attr'
-   ) );
    
-   $wp_customize->add_control( new WP_Customize_Control(
-       $wp_customize,
-       'link2',
-           array(
-               'label'    => __( 'link2' ),
-               'section'  => 'homefooter',
-               'settings' => 'link2',
-               'type'     => 'text'
-           )
-       )
-   );
 
 
-   $wp_customize->add_setting( 'link3', array(
-    'default'           => __( '' ),
-    'sanitize_callback' => 'esc_attr'
-) );
 
-$wp_customize->add_control( new WP_Customize_Control(
-   $wp_customize,
-   'link3',
-       array(
-           'label'    => __( 'link3' ),
-           'section'  => 'homefooter',
-           'settings' => 'link3',
-           'type'     => 'text'
-       )
-   )
-);
-
-
-$wp_customize->add_setting( 'link4', array(
-    'default'           => __( '' ),
-    'sanitize_callback' => 'esc_attr'
-) );
-
-$wp_customize->add_control( new WP_Customize_Control(
-   $wp_customize,
-   'link4',
-       array(
-           'label'    => __( 'link4' ),
-           'section'  => 'homefooter',
-           'settings' => 'link4',
-           'type'     => 'text'
-       )
-   )
-);
 
 
 

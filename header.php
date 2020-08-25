@@ -36,8 +36,8 @@
 
   
 
-  <div class="index-menu"><i class="fas fa-th"></i> </div>
-  <div class="menu-contents">
+  <div class="index-menu dropdown"><i class="fas fa-th"></i> </div>
+  <div class="menu-contents dropbtn">
     <div>
       <a href="#"><i class="fi-cnsuxl-user-circle"></i>
         About
@@ -63,6 +63,7 @@
 
   <div class="index-search navbar-4" >
   <?php get_search_form(); ?>
+  
 
       <i class="fi-xnluxl-magnifying-glass"></i>      
     </div>

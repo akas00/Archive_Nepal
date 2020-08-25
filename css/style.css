@@ -42,7 +42,7 @@ a {
   text-align: center;
   position: relative;
   margin: 5%;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .index-logo {
@@ -58,8 +58,8 @@ a {
   right: 0;
   top: 0;
   font-size: 36px;
-  padding: 2%;
-  border-radius: 75%;
+  /* padding: 2%;
+  border-radius: 75%; */
   transition: all 0.5s ease-out;
 }
 
@@ -75,9 +75,9 @@ a {
   background-color: #1F5F8B;
   padding: 1%;
   width: 15%;
-  top: 15%;
+  top: 8%;
   border-radius: 5px;
-  display: none;
+  visibility: hidden;
   z-index: 1;
 }
 .menu-contents a {
@@ -94,12 +94,17 @@ a {
 }
 
 .index-menu:hover + .menu-contents {
+  visibility: visible;
   display: flex;
 }
 
 .menu-contents:hover + .menu-contents {
+  visibility: visible;
   display: flex;
 }
+
+
+
 
 .index-content {
   width: 60%;
@@ -401,15 +406,16 @@ a {
 
 .featured-carousel-individual {
   margin: 1%;
-  width: 55%;
+  width: 45%;
   text-align: center;
 }
 .featured-carousel-individual a {
   color: #000;
 }
 
-.featured-carousel-individual:hover {
-  box-shadow: 1px 1px 4px #1F5F8B;
+.featured-carousel-individual a:hover {
+  /* box-shadow: 1px 1px 4px #1F5F8B; */
+  color:#1F5F8B;
 }
 
 /* UNIVERSITY FACULTIES */
@@ -593,6 +599,49 @@ display: flex;
 }
 .breatcome_content ul li{
   padding:10px;
+ }
+ .advertise-1 img{
+  width: 100%;
+  height: 65px;
+  object-fit: cover;
+}
+.screen-reader-text{
+  display: none;
+}
+.fi-xnluxl-magnifying-glass{
+  position: absolute;
+  top: 10%;
+  right: 15px;
+  font-size: 30px;
+}
+form{
+  position:relative;
+}
+.menu-footer_menu-container ul{
+  list-style: none;
+}
+.menu-footer_menu-container ul li{
+  padding:1%;
+}
+.index-logo a{
+  color: #000;
+}
+#breadcrumbs a{
+  color:#000;
+}
+#breadcrumbs a:hover{
+  color:#1F5F8B;
+}
+ .content-links-img img{
+   max-width: 130px;
+   object-fit: cover;
+ }
+ .featured-carousel-individual img{
+   width: 130px;
+ }
+ .faculty-semester-subjects a{
+   display: flex;
+   justify-content: space-between;
  }
 
 
