@@ -25,7 +25,7 @@ get_header();
 
   
 <?php if ( have_posts() ): ?>
-<h2>Search Results for '<?php echo get_search_query(); ?>'</h2> 
+<!-- <h2>Search Results for '<?php echo get_search_query(); ?>'</h2>  -->
 <ol>
 <?php while ( have_posts() ) : the_post(); ?>
     <li>
