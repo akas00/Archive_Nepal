@@ -104,14 +104,33 @@
   .index-logo {
     font-size: 26px;
   }
+  .featured{
+    display: none;
+  }
+  .from-web{
+    margin-top:40px;
+    margin-bottom:40px;
+  }
+  .menu-footer_menu-container ul{
+    padding:0px;
+  }
+  .faculty-list{
+    margin: 0;
+  }
+
+
+.footer {
+    padding: 8% 5%;
+    background-color: #1F5F8B;
+}
 
   .index-menu {
     font-size: 26px;
   }
 
   .menu-contents {
-    width: 35%;
-    top: 10%;
+    width: 10%;
+    top: 0%;
   }
 
   .index-content {
@@ -171,9 +190,12 @@
   }
 
   .faculty > div {
-    width: 80%;
-    margin: auto;
-    text-align: center;
+    width: 100%;
+    /* margin: auto;
+    text-align: center; */
+  }
+  .faculty-list ul li{
+    line-height: 2em;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */

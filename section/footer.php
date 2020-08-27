@@ -5,20 +5,20 @@
   </span>
 
   <div class="footer-links">
-    <div>
+    <!-- <div>
       <a href="#">Partners</a>
       <a href="#">Affilliate</a>
       <a href="#">Submit Questions</a>
       <a href="#">Submit Answers</a>
       <a href="#">Advertise</a>
-    </div>
-    <div>
+    </div> -->
+    <!-- <div>
       <a href="#">Partners</a>
       <a href="#">Affilliate</a>
       <a href="#">Submit Questions</a>
       <a href="#">Submit Answers</a>
       <a href="#">Advertise</a>
-    </div>
+    </div> -->
     <div>
       <a href="#">Partners</a>
       <a href="#">Affilliate</a>

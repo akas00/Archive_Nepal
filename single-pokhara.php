@@ -46,7 +46,7 @@ get_header(); ?>
       <?php while ( have_rows('firstyear') ) : the_row();?>
         <div>
 
-        <a href="<?php the_sub_field('firstyear_subjects_links') ?> ">  
+        <a href="<?php the_sub_field('firstyear_subjects_links') ?> " target="_blank">  
          <?php the_sub_field('firstyear_subjects');?>
           
          <i class="fi-xwluxl-download-wide"></i> </a>
@@ -69,7 +69,7 @@ get_header(); ?>
         <?php while ( have_rows('1st_semester') ) : the_row();?>
           <div>
  
-          <a href="<?php the_sub_field('1st_sem_subjects_links') ?> ">  
+          <a href="<?php the_sub_field('1st_sem_subjects_links') ?> " target="_blank">  
            <?php the_sub_field('1st_sem_subjects');?>
             
            <i class="fi-xwluxl-download-wide"></i> </a>
@@ -110,7 +110,7 @@ get_header(); ?>
       <?php while ( have_rows('secondyear') ) : the_row();?>
         <div>
 
-        <a href="<?php the_sub_field('secondyear_subjects_links') ?> ">  
+        <a href="<?php the_sub_field('secondyear_subjects_links') ?> " target="_blank">  
          <?php the_sub_field('secondyear_subjects');?>
           
          <i class="fi-xwluxl-download-wide"></i> </a>
@@ -133,7 +133,7 @@ get_header(); ?>
         <?php while ( have_rows('2nd_semester') ) : the_row();?>
           <div>
  
-          <a href="<?php the_sub_field('2nd_sem_subjects_links') ?> ">  
+          <a href="<?php the_sub_field('2nd_sem_subjects_links') ?> " target="_blank">  
            <?php the_sub_field('2nd_sem_subjects');?>
             
            <i class="fi-xwluxl-download-wide"></i> </a>
@@ -168,7 +168,7 @@ get_header(); ?>
       <?php while ( have_rows('thirdyear') ) : the_row();?>
         <div>
 
-        <a href="<?php the_sub_field('thirdyear_subjects_links') ?> ">  
+        <a href="<?php the_sub_field('thirdyear_subjects_links') ?> " target="_blank">  
          <?php the_sub_field('thirdyear_subjects');?>
           
          <i class="fi-xwluxl-download-wide"></i> </a>
@@ -191,7 +191,7 @@ get_header(); ?>
         <?php while ( have_rows('3rd_semester') ) : the_row();?>
           <div>
  
-          <a href="<?php the_sub_field('3rd_sem_subjects_links') ?> ">  
+          <a href="<?php the_sub_field('3rd_sem_subjects_links') ?> " target="_blank">  
            <?php the_sub_field('3rd_sem_subjects');?>
             
            <i class="fi-xwluxl-download-wide"></i> </a>
@@ -226,7 +226,7 @@ get_header(); ?>
       <?php while ( have_rows('fourthyear') ) : the_row();?>
         <div>
 
-        <a href="<?php the_sub_field('fourthyear_subjects_links') ?> ">  
+        <a href="<?php the_sub_field('fourthyear_subjects_links') ?> " target="_blank">  
          <?php the_sub_field('fourthyear_subjects');?>
           
          <i class="fi-xwluxl-download-wide"></i> </a>
@@ -248,7 +248,7 @@ get_header(); ?>
         <?php while ( have_rows('4th_semester') ) : the_row();?>
           <div>
  
-          <a href="<?php the_sub_field('4th_sem_subjects_links') ?> ">  
+          <a href="<?php the_sub_field('4th_sem_subjects_links') ?> " target="_blank">  
            <?php the_sub_field('4th_sem_subjects');?>
             
            <i class="fi-xwluxl-download-wide"></i> </a>
@@ -283,7 +283,7 @@ get_header(); ?>
         <?php while ( have_rows('5th_semester') ) : the_row();?>
           <div>
  
-          <a href="<?php the_sub_field('5th_sem_subjects_links') ?> ">  
+          <a href="<?php the_sub_field('5th_sem_subjects_links') ?> " target="_blank">  
            <?php the_sub_field('5th_sem_subjects');?>
             
            <i class="fi-xwluxl-download-wide"></i> </a>
@@ -316,7 +316,7 @@ get_header(); ?>
         <?php while ( have_rows('6th_semester') ) : the_row();?>
           <div>
  
-          <a href="<?php the_sub_field('6th_sem_subjects_links') ?> ">  
+          <a href="<?php the_sub_field('6th_sem_subjects_links') ?> " target="_blank">  
            <?php the_sub_field('6th_sem_subjects');?>
             
            <i class="fi-xwluxl-download-wide"></i> </a>
@@ -348,7 +348,7 @@ get_header(); ?>
         <?php while ( have_rows('7th_semester') ) : the_row();?>
           <div>
  
-          <a href="<?php the_sub_field('7th_sem_subjects_links') ?> ">  
+          <a href="<?php the_sub_field('7th_sem_subjects_links') ?> " target="_blank">  
            <?php the_sub_field('7th_sem_subjects');?>
             
            <i class="fi-xwluxl-download-wide"></i> </a>
@@ -383,7 +383,7 @@ get_header(); ?>
         <?php while ( have_rows('8th_semester') ) : the_row();?>
           <div>
  
-          <a href="<?php the_sub_field('8th_sem_subjects_links') ?> ">  
+          <a href="<?php the_sub_field('8th_sem_subjects_links') ?> " target="_blank">  
            <?php the_sub_field('8th_sem_subjects');?>
             
            <i class="fi-xwluxl-download-wide"></i> </a>

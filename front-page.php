@@ -31,24 +31,20 @@
 
 
   
-  <div class="index-menu"><i class="fas fa-th"></i> </div>
-  <div class="menu-contents">
-    <div>
-      <a href="#"><i class="fi-cnsuxl-user-circle"></i>
-        About
+  
+  <ul class="menu-contents">
+    <li class="dropdown">
+      <a href="#" class="dropbtn">
+      <i class="fas fa-th"></i> 
       </a>
-    </div>
-    <div>
-      <a href="#"><i class="fi-cnsuxl-user-circle"></i>
-        About
-      </a>
-    </div>
-    <div>
-      <a href="#"><i class="fi-cnsuxl-user-circle"></i>
-        About
-      </a>
-    </div>
-  </div>
+      <div class="dropdown-content">
+      <a href="#">Link 1  <i class="fi-cnsuxl-user-circle"></i></a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+      </div>
+    </li>
+   
+  </ul>
 
   <div class="index-content">
     <h2> <?php echo get_theme_mod('heading'); ?></h2>
